@@ -1,14 +1,20 @@
 {
   "name": "near-login-vue3",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "dist/near-login-vue3.common.js",
+  "files": [
+    "dist/*"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build-package": "vue-cli-service build --target lib --name near-login-vue3 ./src/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "near-api-js": "^0.43.1",
     "vue": "^3.0.0"
   },
   "devDependencies": {
